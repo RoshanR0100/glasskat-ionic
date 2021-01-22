@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      GlassKat
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,20 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">GlassKat</ion-title>
+      <h5>Monitor your cat with this IoT solution!</h5>
     </ion-toolbar>
   </ion-header>
+    
+  <img id="caticon"src="../assets/cat_icon_set.jpg">
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-fab-button routerLink="/tab2">
+      <ion-icon name="map-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <app-explore-container name="Tab 1 page">
+    <h1>GlassKat</h1>
+    <img src="../assets/cat_icon_set.jpg" routerLink="/tab2">
+  </app-explore-container>
 </ion-content>

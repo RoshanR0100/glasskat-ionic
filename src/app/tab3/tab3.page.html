@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Clips
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Clips</ion-title>
     </ion-toolbar>
   </ion-header>
-
+    <div class="container">
+      <div *ngFor="let img of imgs">
+        <video width="320" height="240" controls>
+          <source src="{{img}}"
+                  type="video/mp4" />
+        </video>
+      </div>
+    
+    </div>
   <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
