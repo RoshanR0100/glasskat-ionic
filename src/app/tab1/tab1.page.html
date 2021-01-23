@@ -1,10 +1,11 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title style="text-align: center; font-family:Verdana, Geneva, Tahoma, sans-serif">
-      <h1>
-        GlassKat
-      </h1>      
-    </ion-title>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="settings-outline" style="width: 35px; height: 25px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="margin-left: 40px;"><h1>GlassKat</h1></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,15 +17,17 @@
     </ion-toolbar>
   </ion-header>
     
-  <img id="caticon"src="../assets/cat_icon_set.jpg">
-  
+  <img id="caticon"src="../assets/cat_icon_set.jpg" routerLink="/tab2">
+  <button type="button" class="btn btn-primary" style="margin-left: 120px;" >
+    Set Up Your Camera
+  </button>
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button routerLink="/tab2">
       <ion-icon name="map-outline"></ion-icon>
     </ion-fab-button>
+    
   </ion-fab>
   <app-explore-container name="Tab 1 page">
-    <h1>GlassKat</h1>
-    <img src="../assets/cat_icon_set.jpg" routerLink="/tab2">
+    
   </app-explore-container>
 </ion-content>
