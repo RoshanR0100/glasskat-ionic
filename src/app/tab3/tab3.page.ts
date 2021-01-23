@@ -5,16 +5,16 @@ import { ClipsService } from '../clips.service';
   selector: 'app-tab3',
   templateUrl: './tab3.page.html',
   styleUrls: ['./tab3.page.scss'],
-  providers:[ClipsService]
+  providers:[]
 })
 export class Tab3Page {
 
   imgs: string[] = []
   res: any;
-  constructor( private y: ClipsService) {
-    this.res = y.getClipUrl().then(e => {
-      this.imgs = e;
-    })
+  constructor( ) {
+    // this.res = y.getClipUrl().then(e => {
+    //   this.imgs = e;
+    // })
    }  
 
   }
