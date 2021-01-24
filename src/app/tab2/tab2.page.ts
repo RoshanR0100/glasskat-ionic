@@ -30,7 +30,7 @@ export class Tab2Page implements OnInit {
       };
       heatmap: any = null; // heatmap instance
   coord: any; // heatmap coordinates array
-  coordinates: Array<Coordinates> = [];
+  coordinates: Array<Coordinate> = [];
       heatmapContainer: HTMLElement;  // heatmap container HTML element
 
     constructor( private service: ApiService ){
@@ -48,18 +48,25 @@ export class Tab2Page implements OnInit {
           backgroundColor: 'inherit'
       };  
       this.heatmap = h337.create(heatmapConfig); // creating the instance
-      var result = this.service.getData().subscribe(e => {
-        this.coord = e
-        this.coordinates = this.coord.map(e => ({ x: e.x, y: e.y, value: 1, timestamp: e.timestamp }))
-        console.log(this.coordinates);
-this.heatmap.setData({ max: 30, data: this.coordinates });
+      // var result = this.service.getData().subscribe(e => {
+      //   this.coord = e
+      //   this.coordinates = this.coord.map(e => ({ x: e.x, y: e.y, value: 1, timestamp: e.timestamp }))
+      //   this.heatmap.setData({ max: 30, data: this.coordinates });
+      // });
+
+      for(var i = 0;i < 50; i++){
+        this.coordinates.push({ x: this.getRandomInt(0,500), y: this.getRandomInt(0,500), value: 1, timestamp: new Date() } as Coordinate)
       }
 
-      );
-      
-      
+      console.log(this.coordinates);
+      this.heatmap.setData({ max: 30, data: this.coordinates });       
          // passing the dummy coordinates
       
     }
-      
+    
+    getRandomInt(min,max){
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random()*(max-min)+min)
+    }
 }
