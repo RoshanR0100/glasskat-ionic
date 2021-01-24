@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-title>
       Heatmap
     </ion-title>
@@ -12,10 +12,13 @@
     <div class="overlay"></div> 
   </div>
   <ion-header collapse="condense">
-    <ion-toolbar>
+    <ion-toolbar color="tertiary">
       <ion-title size="large">Heatmap</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <div id="heatmapContainer" style="width:500px; height: 500px;">
+    <!-- Overlay is for the backgorund. You can even add image instead -->
+    <div class="overlay"></div> 
+  </div>
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>

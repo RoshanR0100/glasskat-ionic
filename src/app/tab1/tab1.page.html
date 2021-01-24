@@ -18,15 +18,13 @@
   </ion-header>
     
   <img id="caticon"src="../assets/cat_icon_set.jpg" routerLink="/tab2">
-  <button type="button" class="btn btn-primary" style="margin-left: 120px;" >
+  <ion-button routerLink="/register" expand="block">Register</ion-button>
+  <ion-button routerLink="/login" expand="block">Login</ion-button>  
+  <ion-button expand="block">
     Set Up Your Camera
-  </button>
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button routerLink="/tab2">
-      <ion-icon name="map-outline"></ion-icon>
-    </ion-fab-button>
-    
-  </ion-fab>
+  </ion-button>
+  <ion-button type="submit" (click)="authService.SignOut()" expand="block">Logout</ion-button>
+  
   <app-explore-container name="Tab 1 page">
     
   </app-explore-container>
