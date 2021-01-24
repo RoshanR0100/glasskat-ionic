@@ -11,10 +11,10 @@ export class Tab3Page {
 
   imgs: string[] = []
   res: any;
-  constructor(y:ClipsService ) {
+  constructor(y:ClipsService) {
     this.res = y.getClipUrl().then(e => {
       this.imgs = e;
-      console.log('Hello')
+      console.log('hello')
     })
    }  
 

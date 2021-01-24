@@ -22,7 +22,7 @@ import { AuthenticationService } from './auth/authentication.service';
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireMessagingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
