@@ -6,7 +6,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', redirectTo: "tabs/tab1",
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {

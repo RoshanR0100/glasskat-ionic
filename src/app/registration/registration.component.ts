@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
     this.authService.RegisterUser(email.value, password.value)
     .then(user => {
       // navigate to user profile
-      // this.router.navigateByUrl('/');
+       this.router.navigateByUrl('/');
     })
     .catch(error => {
       console.log(error.message);
