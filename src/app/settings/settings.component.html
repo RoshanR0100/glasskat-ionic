@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="home-outline" style="width: 35px; height: 25px;" routerLink="/"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="margin-left: 40px;"><h1>Settings</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      Connect to cameras
+      <ion-toggle checked={checked} slot="end"></ion-toggle> 
+    </ion-item>
+    <ion-item>
+      Add Camera
+      <ion-icon name='add-circle-outline' slot="end"></ion-icon> 
+    </ion-item>
+  </ion-list>
+</ion-content>

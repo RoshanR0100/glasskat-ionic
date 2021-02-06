@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
   logIn(email, password){
     this.authService.SignIn(email.value, password.value)
     .then(user => {
-      // navigate to user profile
-      // this.router.navigateByUrl('/');
+      //navigate to user profile
+      this.router.navigateByUrl('/');
     })
     .catch(error => {
       console.log(error.message);

@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SettingsComponent } from './settings/settings.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: "tabs/tab1",
+    path: '', 
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path:'verify-email',
     component: VerifyEmailComponent
+  },
+  {
+    path:'settings',
+    component: SettingsComponent
   }
 ];
 @NgModule({
